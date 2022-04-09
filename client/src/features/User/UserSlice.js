@@ -12,7 +12,7 @@ export const signup = createAsyncThunk(
     'users/signup',
     async ({ username, password, passwordConfirmation, name }, thunkAPI) => {
         try {
-            const response = await fetch('/signup', {
+            const response = await fetch('/api/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export const login = createAsyncThunk(
     'users/login',
     async ({ username, password }, thunkAPI) => {
         try {
-            const response = await fetch('/login', {
+            const response = await fetch('/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ export const fetchUser = createAsyncThunk(
     'users/fetchUser',
     async (thunkAPI) => {
         try {
-            const response = await fetch('/me', {
+            const response = await fetch('/api/me', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ export const fetchUser = createAsyncThunk(
 
 export const logout = createAsyncThunk('users/logout', async (thunkAPI) => {
     try {
-        const response = await fetch('/logout', {
+        const response = await fetch('/api/logout', {
             method: 'DELETE',
         });
 

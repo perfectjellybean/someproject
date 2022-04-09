@@ -1,4 +1,4 @@
-class OwnersController < ApplicationController
+class Api::OwnersController < ApplicationController
   def index
     render json: Owner.all
   end

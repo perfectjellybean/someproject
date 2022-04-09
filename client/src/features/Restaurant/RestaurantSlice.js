@@ -14,7 +14,7 @@ export const createRestaurant = createAsyncThunk(
     'restaurants/create',
     async ({ restaurantName, userId }, thunkAPI) => {
         try {
-            const response = await fetch('/restaurants', {
+            const response = await fetch('/api/restaurants', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ export const getUserRestaurants = createAsyncThunk(
     'restaurants/getUserRestaurants',
     async (thunkAPI) => {
         try {
-            const response = await fetch(`/restaurant_owners/`, {
+            const response = await fetch(`/api/restaurant_owners/`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ export const getRestaurant = createAsyncThunk(
     'restaurants/getRestaurant',
     async ({ restaurantId }, thunkAPI) => {
         try {
-            const response = await fetch(`/restaurants/${restaurantId}`, {
+            const response = await fetch(`/api/restaurants/${restaurantId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ export const getRestaurantRecords = createAsyncThunk(
     async ({ restaurantId }, thunkAPI) => {
         try {
             const response = await fetch(
-                `/restaurant_records/${restaurantId}`,
+                `/api/restaurant_records/${restaurantId}`,
                 {
                     method: 'GET',
                     headers: {
@@ -121,7 +121,7 @@ export const createRestaurantRecord = createAsyncThunk(
     'restaurants/createRestaurantRecord',
     async ({ userId, restaurantId }, thunkAPI) => {
         try {
-            const response = await fetch(`/restaurant_records/`, {
+            const response = await fetch(`/api/restaurant_records/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ export const getRestaurantVisited = createAsyncThunk(
     'restaurants/getRestaurantVisited',
     async (thunkAPI) => {
         try {
-            const response = await fetch(`/visit`, {
+            const response = await fetch(`/api/visit`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -175,7 +175,7 @@ export const getRestaurantRecordsPastDay = createAsyncThunk(
     'restaurants/getRestaurantRecordsPastDay',
     async (thunkAPI) => {
         try {
-            const response = await fetch(`/visit/day`, {
+            const response = await fetch(`/api/visit/day`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

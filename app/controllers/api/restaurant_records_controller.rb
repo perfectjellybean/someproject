@@ -1,4 +1,4 @@
-class RestaurantRecordsController < ApplicationController
+class Api::RestaurantRecordsController < ApplicationController
   def create
     record = RestaurantRecord.create(user_id: params[:user_id], restaurant_id: params[:restaurant_id])
     render json: record.restaurant, status: :created
