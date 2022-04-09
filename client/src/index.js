@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import './index.css';
@@ -16,7 +16,7 @@ import RestaurantHistory from './components/RestaurantHistory';
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
+        <HashRouter>
             <Header />
             <Routes>
                 <Route path="/" element={<App />} />
@@ -36,7 +36,7 @@ ReactDOM.render(
                     element={<RestaurantHistory />}
                 />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </Provider>,
     document.getElementById('root')
 );
