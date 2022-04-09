@@ -1,0 +1,103 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.welcome-text {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000000;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.btn-no-border {
+    border: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form > input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.submit {
+    border: none;
+    margin: 10px auto;
+    max-width: 50%;
+    font-size: 18px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    background-color: #2d4aaa;
+    color: #fff;
+}
+
+.margin-around {
+    margin: 32px 16px 24px 0;
+}
+
+.primary-btn {
+    border: none;
+    max-width: 50%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #2d4aaa;
+    color: #fff;
+    text-decoration: none;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.restaurants {
+    display: flex;
+}
+
+.restaurant-card {
+    flex: 1;
+    margin: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.restaurant-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.restaurant-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
