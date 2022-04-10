@@ -23,7 +23,7 @@ function RestaurantDetails() {
 
     const { restaurant } = useSelector(restaurantSelector);
     const { user } = useSelector(userSelector);
-    const restaurantUrl = window.location.host + loc.pathname;
+    const restaurantUrl = window.location.origin + loc.pathname;
 
     useEffect(() => {
         dispatch(getRestaurant({ restaurantId: id }));
